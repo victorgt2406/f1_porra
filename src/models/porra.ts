@@ -3,6 +3,7 @@ type Porra<Player, Pilot, Constructor> = {
     pilot: Pilot;
     constructor?: Constructor
     position: number;
+    year: number;
 }
 
 export default Porra;

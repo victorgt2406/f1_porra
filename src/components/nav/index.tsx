@@ -2,6 +2,8 @@
 
 export default function () {
     return (
-        <>hello</>
+        <div>
+            nav
+        </div>
     );
 }
