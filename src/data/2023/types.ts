@@ -10,7 +10,8 @@ type Constructor = "red_bull" | "aston_martin" | "ferrari" | "mercedes" | "alfa"
 
 const CONSTRUCTORS = ["red_bull", "aston_martin", "ferrari", "mercedes", "alfa", "alpine", "williams", "alphatauri", "haas", "mclaren"];
 
-interface Porra extends P<Player, Pilot, Constructor> {};
+// interface Porra extends P<Player, Pilot, Constructor> {};
+interface Porra extends P<string, string, string> {};
 
 export {PLAYERS, PILOTS, CONSTRUCTORS};
 export type { Player, Pilot, Constructor, Porra };
