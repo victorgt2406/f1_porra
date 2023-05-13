@@ -1,4 +1,4 @@
-import { Pilot, Porra } from "./types";
+import { Pilot, Porra } from "../../models/types";
 
 
 const porraSquare: Porra[] = [
