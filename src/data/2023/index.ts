@@ -1,4 +1,5 @@
-import { DriverIndex, Porra } from "../../models/indexes";
+import Porra from "../../models/Porra";
+import { DriverIndex } from "../../models/Indexes";
 
 
 const porraSquare: Porra[] = [

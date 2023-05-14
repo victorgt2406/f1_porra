@@ -1,4 +1,4 @@
-import { ConstructorIndex } from "./indexes"
+import { ConstructorIndex } from "./Indexes"
 
 
 type Constructor = {

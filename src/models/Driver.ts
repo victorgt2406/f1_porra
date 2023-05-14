@@ -1,4 +1,4 @@
-import { ConstructorIndex, DriverIndex } from "./indexes"
+import { ConstructorIndex, DriverIndex } from "./Indexes"
 
 
 type Driver = {

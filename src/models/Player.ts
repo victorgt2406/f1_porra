@@ -1,4 +1,4 @@
-import { PlayerIndex } from "./indexes";
+import { PlayerIndex } from "./Indexes";
 
 
 type Player = {

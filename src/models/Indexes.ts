@@ -8,14 +8,6 @@ type ConstructorIndex = "red_bull" | "aston_martin" | "ferrari" | "mercedes" | "
 
 const CONSTRUCTORS = ["red_bull", "aston_martin", "ferrari", "mercedes", "alfa", "alpine", "williams", "alphatauri", "haas", "mclaren"];
 
-type Porra = {
-    player: PlayerIndex;
-    pilot: DriverIndex;
-    constructor?: ConstructorIndex
-    position: number;
-    year: number;
-}
-
 
 export {PLAYERS, PILOTS, CONSTRUCTORS};
-export type { PlayerIndex, DriverIndex, ConstructorIndex, Porra };
+export type { PlayerIndex, DriverIndex, ConstructorIndex };
