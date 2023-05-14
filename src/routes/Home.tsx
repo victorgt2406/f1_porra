@@ -12,6 +12,7 @@ export default function () {
     useEffect(() => {
         const getPilotStandings = async () => {
             try {
+                // "https://ergast.com/api/f1/2023/4/driverStandings.json" drivers standing de la carrera 4
                 const res = await axios.get("https://ergast.com/api/f1/2023/driverStandings.json");
                 const data: MRData = res.data.MRData;
                 setPilots(data.StandingsTable.StandingsLists[0].DriverStandings);

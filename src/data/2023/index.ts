@@ -1,4 +1,4 @@
-import { Pilot, Porra } from "../../models/types";
+import { DriverIndex, Porra } from "../../models/indexes";
 
 
 const porraSquare: Porra[] = [
@@ -263,7 +263,7 @@ const porraDax: Porra[] = [
         player: "dax",
         position: 17,
         constructor: undefined,
-        pilot: "vettel" as Pilot,
+        pilot: "vettel" as DriverIndex,
         year: 2023
     },
     {
