@@ -1,3 +1,4 @@
-import data2023 from "./2023";
-
-export default [...data2023];
+import Porra from "../models/Porra";
+import data2023 from "./data2023";
+const data:Porra[] = data2023;
+export default data;

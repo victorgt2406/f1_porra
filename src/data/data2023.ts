@@ -1,5 +1,5 @@
-import Porra from "../../models/Porra";
-import { DriverIndex } from "../../models/Indexes";
+import Porra from "../models/Porra";
+import { DriverIndex } from "../models/Indexes";
 
 
 const porraSquare: Porra[] = [
@@ -444,4 +444,5 @@ const porraBic: Porra[] = [
 
 ];
 
-export default [...porraSquare, ...porraDax, ...porraBic];
+const data: Porra[] = [...porraSquare, ...porraDax, ...porraBic]
+export default data;
