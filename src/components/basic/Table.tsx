@@ -1,16 +1,29 @@
-export default function () {
+export default function ({children:data,headers}:{children: string[][], headers?: string[]}) {
     return (
         <table className="table">
-            <thead>
+            {!headers ? (
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+            ) : (
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    {headers.map((column, index)=><th key={"header_"+index}>{column}</th>)}
                 </tr>
-            </thead>
+            )}
             <tbody>
-                <tr>
+                {data.map((columns, index) => (
+                    <tr key={"row_" + index}>
+                        {columns.map((column, index) => (
+                            <td key={"col_" + index}>{column}</td>
+                        ))}
+                    </tr>
+                ))}
+                {/* <tr>
                     <th scope="row">1</th>
                     <td>Mark</td>
                     <td>Otto</td>
@@ -26,7 +39,7 @@ export default function () {
                     <th scope="row">3</th>
                     <td colSpan={2}>Larry the Bird</td>
                     <td>@twitter</td>
-                </tr>
+                </tr> */}
             </tbody>
         </table>
     );

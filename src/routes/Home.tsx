@@ -10,6 +10,7 @@ import {
 import Result, { ConstructorPoints, DriverPoints } from "../models/Result";
 import { PlayerIndex } from "../models/Indexes";
 import Table from "../components/basic/Table";
+import { JSX } from "react/jsx-runtime";
 
 export default function () {
     const [drivers, setDrivers] = useState<DriverStanding[]>([]);
@@ -160,7 +161,7 @@ export default function () {
                     </div>
                 );
             })}
-            <Table/>
+            <Table headers={["player","constructors","drivers"]}>{playersResults.map<string[]>((player)=>[player.player, (player.pointsTotalConstructor.toString()), (player.pointsTotalDrivers.toString())])}</Table>
         </div>
     );
 }
