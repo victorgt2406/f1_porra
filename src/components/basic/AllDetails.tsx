@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import results from "../../utils/results";
 import Result from "../../models/Result";
 import Table from "./Table";
-import { ConstructorStanding, DriverStanding } from "../../models/ergastTypes";
 import {
     getConstructorStandings2 as getConstructorStandings,
     getDriverStandings2 as getDriverStandings,
@@ -10,8 +9,6 @@ import {
 
 export default function () {
     const [playersResults, setPlayerResults] = useState<Result[]>();
-    const [drivers, setDrivers] = useState<DriverStanding[]>();
-    const [constructor, setConstructors] = useState<ConstructorStanding[]>();
     const [allDetails, setAllDetails] = useState<string[][]>();
     useEffect(() => {
         (async () => {
@@ -19,9 +16,8 @@ export default function () {
                 const res = await results();
                 setPlayerResults(res);
                 const dri = await getDriverStandings();
-                setDrivers(dri);
+
                 const cons = await getConstructorStandings();
-                setConstructors(cons);
                 // console.log(cons);
                 setAllDetails(
                     dri.map((value, index) => [
@@ -40,8 +36,6 @@ export default function () {
             } catch (err) {
                 console.log(err);
                 setPlayerResults(undefined);
-                setDrivers([]);
-                setConstructors([]);
             }
         })();
     }, []);
