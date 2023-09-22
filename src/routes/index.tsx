@@ -4,11 +4,11 @@ import Bets from "./Bets";
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "f1_porra/",
         element: <Home/>,
     },
     {
-        path: "bets",
+        path: "f1_porra/bets",
         element: <Bets/>
     }
 ]);
