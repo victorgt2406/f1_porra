@@ -1,4 +1,4 @@
-import Results from "../components/basic/Results";
+import Results from "../components/basic/Results2";
 
 export default function () {
     return (
