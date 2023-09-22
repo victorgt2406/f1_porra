@@ -1,52 +1,22 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import {
     ConstructorStanding,
     DriverStanding,
-    MRData,
 } from "../../models/ergastTypes";
 import RULES from "../../utils/rules";
 import { PlayerIndex } from "../../models/Indexes";
 import Result, { ConstructorPoints, DriverPoints } from "../../models/Result";
 import Table from "./Table";
 import data from "../../data";
+import { getConstructorStandings, getDriverStandings } from "../../utils/F1data";
 
 export default function () {
     const [drivers, setDrivers] = useState<DriverStanding[]>([]);
     const [constructors, setConstructors] = useState<ConstructorStanding[]>([]);
 
     useEffect(() => {
-        const getPilotStandings = async () => {
-            try {
-                // "https://ergast.com/api/f1/2023/4/driverStandings.json" drivers standing de la carrera 4
-                const res = await axios.get(
-                    "https://ergast.com/api/f1/2023/driverStandings.json"
-                );
-                const data: MRData = res.data.MRData;
-                setDrivers(
-                    data.StandingsTable.StandingsLists[0].DriverStandings
-                );
-            } catch (err) {
-                console.log("error loading", err);
-            }
-        };
-
-        const getConstructorStandings = async () => {
-            try {
-                const res = await axios.get(
-                    "https://ergast.com/api/f1/2023/constructorStandings.json"
-                );
-                console.log(res);
-                const data: MRData = res.data.MRData;
-                setConstructors(
-                    data.StandingsTable.StandingsLists[0].ConstructorStandings
-                );
-            } catch (err) {
-                console.log("error loading", err);
-            }
-        };
-        getPilotStandings();
-        getConstructorStandings();
+        getDriverStandings(setDrivers);
+        getConstructorStandings(setConstructors);
     }, []);
 
     const pilotsIds = drivers
