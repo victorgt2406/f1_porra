@@ -118,7 +118,7 @@ export default async function () {
         return result;
     });
 
-    console.log(playersResults);
+    // console.log(playersResults);
 
     return playersResults;
 }

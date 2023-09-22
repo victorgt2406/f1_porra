@@ -1,9 +1,11 @@
-import Results from "../components/basic/Results2";
+import AllDetails from "../components/basic/AllDetails";
+import Summary from "../components/basic/Summary";
 
 export default function () {
     return (
         <div className="container">
-            <Results />
+            <Summary />
+            <AllDetails/>
         </div>
     );
 }

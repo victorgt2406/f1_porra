@@ -13,7 +13,7 @@ export default function () {
                 setPlayerResults(undefined);
             }
         })();
-    },[]);
+    }, []);
     const [playersResults, setPlayerResults] = useState<Result[]>();
 
     return playersResults === undefined ? (

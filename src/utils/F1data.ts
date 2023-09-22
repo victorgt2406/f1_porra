@@ -50,7 +50,7 @@ const getConstructorStandings2 = async () => {
         const res = await axios.get(
             "https://ergast.com/api/f1/2023/constructorStandings.json"
         );
-        console.log(res);
+        // console.log(res);
         const data: MRData = res.data.MRData;
 
         return data.StandingsTable.StandingsLists[0].ConstructorStandings;
